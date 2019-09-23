@@ -1,1 +1,0 @@
-#data ana jp
