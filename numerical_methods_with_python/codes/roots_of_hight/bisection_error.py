@@ -2,11 +2,12 @@
 #root is 1.5, 1.0
 
 
-x1 = 1.1
-x2 = 1.9
+y = lambda x: 2*x**2 -5*x +3
+x1 = float(input('Enter the value of X1: '))
+x2 = float(input('Enter the value of X2: '))
 
-y1 = 2*x1**2 -5*x1 +3
-y2 = 2*x2**2 -5*x2 +3
+y1 = y(x1)
+y2 = y(x2)
 
 if y1 *y2 > 0:
     print('The root is not with the given interval')
@@ -14,9 +15,9 @@ if y1 *y2 > 0:
 
 for bisection in range(1, 101):
     xh = (x1 + x2) /2
-    yh = 2*xh**2 -5*xh +3
+    yh = y(xh)
 
-    y1 = 2*x1**2 -5*x1 +3
+    y1 = y(x1)
 
     if abs(y1) < 1.0E-6:
         break
